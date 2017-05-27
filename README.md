@@ -1,14 +1,28 @@
 # WacomTouchToggle
 
-Easily turn on and off touchpad capabilities for Wacom tablets (such as the Wacom Bamboo).
+Easily turn on and off touchpad capabilities for Wacom graphics tablets (such as the Wacom Bamboo).
 
 ## Authors
 
 - Jason C. McDonald (CodeMouse92)
 
+## Compatibility
+
+This should work on any Debian-based system, and may also work on other Linux systems. It is
+designed to work automatically with any graphics tablet that can be controlled by
+`xsetwacom`.
+
+**If you encounter any problems with any Linux system or Wacom tablet, please report in Issues!**
+
+Tested on:
+
+- Ubuntu 14.04
+- Ubuntu 16.04
+- Linux Mint 18.1
+
 ## History
 
-Wacom tablets are essential parts of any modern graphic designer's toolkit. Luckily for us
+Wacom grahpics tablets are essential parts of any modern graphic designer's toolkit. Luckily for us
 Linux users, they work with Ubuntu very well out of the box! However, some tablets
 (such as the Wacom Bamboo) have touchpad capabilities, which can be a massive inconvenience
 if you tend to rest your hand on the pad while drawing. Shutting this capability off is less than
