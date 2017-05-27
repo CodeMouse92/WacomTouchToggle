@@ -5,6 +5,7 @@ Easily turn on and off touchpad capabilities for Wacom graphics tablets (such as
 ## Authors
 
 - Jason C. McDonald (CodeMouse92)
+- Inspired by [this answer][1] from Maxweel on AskUbuntu.
 
 ## Compatibility
 
@@ -64,3 +65,5 @@ If you receive the message...
 > Cannot find device 'touch'.
 
 ...that means the tablet is either not plugged in, or has no touch capability to toggle.
+
+[1]: https://askubuntu.com/a/118466/23786
