@@ -24,9 +24,29 @@ be available from your system's default package repository.
 
 ## Installation
 
-Simply place the `wacomtouch` file in a convenient place for scripts (such as `/usr/local/bin`), and
-be sure to add that directory to your system path. Mark the script as executable via `chmod +x wacomtouch`.
+Simply place the `wacomtouch` file in a convenient place for scripts, and be sure the location
+is included in your environment path. Mark the script as executable via `chmod +x wacomtouch`.
+
+Here's an example install script, placing the script in your `/usr/local/bin` directory. Note that we
+only need the `sudo` because we're working in a system directory.
+
+```bash
+# Move to the location where the script will live.
+$ cd /usr/local/bin
+# Download the script file from GitHub directly.
+$ sudo wget https://github.com/CodeMouse92/WacomTouchToggle/raw/master/wacomtouch
+# Make the script executable. (You are encouraged to read the file BEFORE doing this, so you know what it does.
+$ sudo chmod +x wacomtouch
+# Run the script, turning off your tablet's touch functionality.
+$ wacomtouch off
+```
 
 ## Usage
 
 To turn on and off your tablet's touchpad capability, run `wacomtouch off` or `wacomtouch on`.
+
+If you receive the message...
+
+> Cannot find device 'touch'.
+
+...that means the tablet is either not plugged in, or has no touch capability to toggle.
