@@ -1,0 +1,22 @@
+#!/bin/bash
+
+STATUS="$1"
+
+#Isolate the id of the touch device automatically.
+rawID=`xsetwacom --list | pcregrep -M 'TOUCH' | pcregrep -o 'id\: \d*'`
+#Trim further
+device=`echo "$rawID" | grep -o "[0-9]\+"`
+
+xsetwacom --set $device touch $1
+
+case $1 in
+    on) 
+        echo "Tablet touch is ENABLED."
+        ;;
+    off)
+        echo "Tablet touch is DISABLED."
+        ;;
+    *)  
+        echo "Invalid option. Must be either on or off."
+        ;;
+esac
