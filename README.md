@@ -1,6 +1,7 @@
 # WacomTouchToggle
 
-Easily turn on and off touchpad capabilities for Wacom graphics tablets (such as the Wacom Bamboo).
+Easily turn on and off touchpad capabilities for Wacom graphics tablets (such as
+the Wacom Bamboo).
 
 ## Authors
 
@@ -9,41 +10,40 @@ Easily turn on and off touchpad capabilities for Wacom graphics tablets (such as
 
 ## Compatibility
 
-This should work on any Debian-based system, and may also work on other Linux systems. It is
-designed to work automatically with any graphics tablet that can be controlled by
-`xsetwacom`.
+This should work on any Debian-based system, and may also work on other Linux
+systems. It is designed to work automatically with any graphics tablet that can
+be controlled by `xsetwacom`.
 
-**If you encounter any problems with any Linux system or Wacom tablet, please report in Issues!**
-
-Tested on:
-
-- Ubuntu 14.04
-- Ubuntu 16.04
-- Linux Mint 18.1
+**If you encounter any problems with any Linux system or Wacom tablet, please
+**report in Issues!**
 
 ## History
 
-Wacom grahpics tablets are essential parts of any modern graphic designer's toolkit. Luckily for us
-Linux users, they work with Ubuntu very well out of the box! However, some tablets
-(such as the Wacom Bamboo) have touchpad capabilities, which can be a massive inconvenience
-if you tend to rest your hand on the pad while drawing. Shutting this capability off is less than
-trivial, so I wrote this script to automate the process.
+Wacom graphics tablets are essential parts of any modern graphic designer's
+toolkit. Luckily for us Linux users, they work with Ubuntu very well out of the
+box! However, some tablets (such as the Wacom Bamboo) have touchpad
+capabilities, which can be a massive inconvenience if you tend to rest your hand
+on the pad while drawing. Shutting this capability off is less than trivial, so
+I wrote this script to automate the process.
 
-I've been using this script for three years - it's the first thing I run when I plug in
-my Wacom Bamboo!
+I've been using this script for three years - it's the first thing I run when I
+plug in my Wacom Bamboo!
 
 ## Prerequisites
 
-You must have the packages `pcregrep` and `xsetwacom` installed on your system. Both should
-be available from your system's default package repository.
+You must have the package `pcregrep` installed on your system, which should be
+available from your system's default package repository. You should also have
+`xsetwacom` on your system, which is usually pre-installed on Ubuntu by default.
 
 ## Installation
 
-Simply place the `wacomtouch` file in a convenient place for scripts, and be sure the location
-is included in your environment path. Mark the script as executable via `chmod +x wacomtouch`.
+Simply place the `wacomtouch` file in a convenient place for scripts, and be
+sure the location is included in your environment path. Mark the script as
+executable via `chmod +x wacomtouch`.
 
-Here's an example install script, placing the script in your `/usr/local/bin` directory. Note that we
-only need the `sudo` because we're working in a system directory.
+Here's an example install, placing the script in your `/usr/local/bin`
+directory. Note that we only need the `sudo` because we're working in a system
+directory.
 
 ```bash
 # Move to the location where the script will live.
@@ -62,8 +62,9 @@ To turn on and off your tablet's touchpad capability, run `wacomtouch off` or `w
 
 If you receive the message...
 
-> Cannot find device 'touch'.
+> No Wacom touch device detected.
 
-...that means the tablet is either not plugged in, or has no touch capability to toggle.
+...that means the tablet is either not plugged in, or has no touch capability to
+toggle.
 
 [1]: https://askubuntu.com/a/118466/23786

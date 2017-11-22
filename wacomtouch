@@ -3,7 +3,7 @@
 # WacomTouchToggle
 # Easily turn on and off touchpad capabilities for Wacom tablets.
 # AUTHOR(S): Jason C. McDonald
-# VERSION: 1.0
+# VERSION: 1.1
 # GITHUB: https://github.com/CodeMouse92/WacomTouchToggle
 
 # Copyright (c) 2017 Jason C. McDonald.
@@ -38,16 +38,22 @@ rawID=`xsetwacom --list | pcregrep -M 'TOUCH' | pcregrep -o 'id\: \d*'`
 #Trim further
 device=`echo "$rawID" | grep -o "[0-9]\+"`
 
-xsetwacom --set $device touch $1
+if [[ -z "$device" ]]
+then
+    echo "No Wacom touch device detected."
+    exit 0
+fi
 
 case $1 in
-    on) 
+    on)
+        xsetwacom --set $device touch $1
         echo "Tablet touch is ENABLED."
         ;;
     off)
+        xsetwacom --set $device touch $1
         echo "Tablet touch is DISABLED."
         ;;
-    *)  
+    *)
         echo "Invalid option. Must be either on or off."
         ;;
 esac
