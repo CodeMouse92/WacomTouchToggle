@@ -15,7 +15,7 @@ systems. It is designed to work automatically with any graphics tablet that can
 be controlled by `xsetwacom`.
 
 **If you encounter any problems with any Linux system or Wacom tablet, please
-**report in Issues!**
+report in Issues!**
 
 ## History
 
