@@ -49,7 +49,7 @@ directory.
 # Move to the location where the script will live.
 $ cd /usr/local/bin
 # Download the script file from GitHub directly.
-$ sudo wget https://github.com/CodeMouse92/WacomTouchToggle/raw/master/wacomtouch
+$ sudo wget https://github.com/CodeMouse92/WacomTouchToggle/raw/main/wacomtouch
 # Make the script executable. (You are encouraged to read the file BEFORE doing this, so you know what it does.
 $ sudo chmod +x wacomtouch
 # Run the script, turning off your tablet's touch functionality.
